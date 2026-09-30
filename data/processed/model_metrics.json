@@ -1,0 +1,135 @@
+{
+  "evaluation_timestamp": "2026-09-27T18:15:03.826856+00:00",
+  "disclaimer": "SYNTHETIC SIMULATED DATASET ONLY. Timings, routes, disruptions, and model predictions are generated for MVP machine learning evaluation and DO NOT represent real historical Indian Railways operational logs.",
+  "summary": {
+    "total_test_journeys": 40,
+    "total_evaluated_samples": 2430,
+    "random_seed": 42
+  },
+  "by_horizon": {
+    "1_station_ahead": {
+      "sample_count": 1210,
+      "baseline_mae": 66.466,
+      "baseline_rmse": 96.208,
+      "ml_mae": 5.167,
+      "ml_rmse": 8.362,
+      "absolute_diff_mae": -61.299,
+      "percentage_improvement": 92.23,
+      "winner": "ML"
+    },
+    "3_stations_ahead": {
+      "sample_count": 810,
+      "baseline_mae": 78.83,
+      "baseline_rmse": 104.426,
+      "ml_mae": 43.528,
+      "ml_rmse": 56.843,
+      "absolute_diff_mae": -35.302,
+      "percentage_improvement": 44.78,
+      "winner": "ML"
+    },
+    "5_stations_ahead": {
+      "sample_count": 410,
+      "baseline_mae": 87.321,
+      "baseline_rmse": 113.193,
+      "ml_mae": 66.337,
+      "ml_rmse": 84.366,
+      "absolute_diff_mae": -20.984,
+      "percentage_improvement": 24.03,
+      "winner": "ML"
+    }
+  },
+  "by_disruption": {
+    "no_disruption": {
+      "sample_count": 1585,
+      "baseline_mae": 71.684,
+      "baseline_rmse": 99.74,
+      "ml_mae": 26.935,
+      "ml_rmse": 47.452,
+      "absolute_diff_mae": -44.749,
+      "percentage_improvement": 62.43,
+      "winner": "ML"
+    },
+    "with_disruption": {
+      "sample_count": 845,
+      "baseline_mae": 78.649,
+      "baseline_rmse": 106.131,
+      "ml_mae": 30.788,
+      "ml_rmse": 49.268,
+      "absolute_diff_mae": -47.861,
+      "percentage_improvement": 60.85,
+      "winner": "ML"
+    }
+  },
+  "cross_tabulation": {
+    "1_stations_ahead_no_disruption": {
+      "sample_count": 790,
+      "baseline_mae": 64.706,
+      "baseline_rmse": 94.607,
+      "ml_mae": 4.171,
+      "ml_rmse": 6.752,
+      "absolute_diff_mae": -60.535,
+      "percentage_improvement": 93.55,
+      "winner": "ML"
+    },
+    "1_stations_ahead_with_disruption": {
+      "sample_count": 420,
+      "baseline_mae": 69.778,
+      "baseline_rmse": 99.148,
+      "ml_mae": 7.04,
+      "ml_rmse": 10.755,
+      "absolute_diff_mae": -62.738,
+      "percentage_improvement": 89.91,
+      "winner": "ML"
+    },
+    "3_stations_ahead_no_disruption": {
+      "sample_count": 525,
+      "baseline_mae": 75.913,
+      "baseline_rmse": 101.76,
+      "ml_mae": 41.937,
+      "ml_rmse": 56.154,
+      "absolute_diff_mae": -33.976,
+      "percentage_improvement": 44.76,
+      "winner": "ML"
+    },
+    "3_stations_ahead_with_disruption": {
+      "sample_count": 285,
+      "baseline_mae": 84.203,
+      "baseline_rmse": 109.167,
+      "ml_mae": 46.459,
+      "ml_rmse": 58.091,
+      "absolute_diff_mae": -37.744,
+      "percentage_improvement": 44.83,
+      "winner": "ML"
+    },
+    "5_stations_ahead_no_disruption": {
+      "sample_count": 270,
+      "baseline_mae": 83.88,
+      "baseline_rmse": 109.89,
+      "ml_mae": 64.371,
+      "ml_rmse": 83.388,
+      "absolute_diff_mae": -19.509,
+      "percentage_improvement": 23.26,
+      "winner": "ML"
+    },
+    "5_stations_ahead_with_disruption": {
+      "sample_count": 140,
+      "baseline_mae": 93.959,
+      "baseline_rmse": 119.304,
+      "ml_mae": 70.129,
+      "ml_rmse": 86.22,
+      "absolute_diff_mae": -23.83,
+      "percentage_improvement": 25.36,
+      "winner": "ML"
+    }
+  },
+  "overall": {
+    "sample_count": 2430,
+    "baseline_mae": 74.106,
+    "baseline_rmse": 102.008,
+    "ml_mae": 28.275,
+    "ml_rmse": 48.091,
+    "absolute_diff_mae": -45.831,
+    "percentage_improvement": 61.85,
+    "winner": "ML"
+  }
+}

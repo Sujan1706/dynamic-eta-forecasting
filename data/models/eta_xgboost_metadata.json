@@ -1,0 +1,85 @@
+{
+  "model_name": "Dynamic Train ETA XGBoost Regressor",
+  "model_version": "1.0.0",
+  "model_type": "XGBoost Regressor (Tree-based Gradient Boosting)",
+  "target_column": "actual_remaining_minutes",
+  "target_formulation": "residual",
+  "prediction_label": "minutes_to_next_station",
+  "features": [
+    "distance_to_go_km",
+    "scheduled_time_to_go_min",
+    "num_intermediate_halts",
+    "current_delay_min",
+    "delay_trend_3pt",
+    "active_speed_restriction_flag",
+    "congestion_score_downstream",
+    "hist_avg_delay_this_section",
+    "hist_recovery_rate_section",
+    "weather_flag",
+    "day_type"
+  ],
+  "categorical_features": [
+    "day_type"
+  ],
+  "trained_at": "2026-09-27T18:13:54.349499+00:00",
+  "dataset_info": {
+    "total_samples": 6125,
+    "train_samples": 4915,
+    "test_samples": 1210,
+    "total_journeys": 200,
+    "train_journeys": 160,
+    "test_journeys": 40,
+    "test_ratio": 0.2,
+    "random_seed": 42
+  },
+  "metrics": {
+    "mae": 5.174,
+    "rmse": 8.357,
+    "r2_score": 0.9759,
+    "baseline_mae_comparison": 28.472
+  },
+  "hyperparameters": {
+    "objective": "reg:squarederror",
+    "eval_metric": [
+      "mae",
+      "rmse"
+    ],
+    "max_depth": 6,
+    "learning_rate": 0.08,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "min_child_weight": 3,
+    "gamma": 0.1,
+    "seed": 42,
+    "num_boost_round": 200
+  },
+  "feature_importance_gain": {
+    "scheduled_time_to_go_min": 2118.917236328125,
+    "distance_to_go_km": 1396.0614013671875,
+    "current_delay_min": 220.65428161621094,
+    "weather_flag": 158.80274963378906,
+    "delay_trend_3pt": 151.24794006347656,
+    "day_type": 122.30133819580078,
+    "congestion_score_downstream": 80.85078430175781,
+    "active_speed_restriction_flag": 52.330299377441406,
+    "num_intermediate_halts": 0.0,
+    "hist_avg_delay_this_section": 0.0,
+    "hist_recovery_rate_section": 0.0
+  },
+  "feature_importance_weight": {
+    "distance_to_go_km": 2089.0,
+    "scheduled_time_to_go_min": 1542.0,
+    "num_intermediate_halts": 0.0,
+    "current_delay_min": 2101.0,
+    "delay_trend_3pt": 1111.0,
+    "active_speed_restriction_flag": 18.0,
+    "congestion_score_downstream": 17.0,
+    "hist_avg_delay_this_section": 0.0,
+    "hist_recovery_rate_section": 0.0,
+    "weather_flag": 38.0,
+    "day_type": 486.0
+  },
+  "model_file_name": "eta_xgboost_model.json",
+  "is_synthetic": true,
+  "disclaimer": "SYNTHETIC SIMULATED DATASET ONLY. Timings, routes, disruptions, and model predictions are generated for MVP machine learning evaluation and DO NOT represent real historical Indian Railways operational logs."
+}
